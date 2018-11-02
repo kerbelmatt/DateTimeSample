@@ -42,18 +42,18 @@ Partial Class frmMain
         Me.lblStartDate = New System.Windows.Forms.Label()
         Me.errP = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.grpSpan = New System.Windows.Forms.GroupBox()
+        Me.btnClearSpan = New System.Windows.Forms.Button()
+        Me.btnUpdateSpan = New System.Windows.Forms.Button()
+        Me.btnSpan = New System.Windows.Forms.Button()
         Me.lblElapsedUnits = New System.Windows.Forms.Label()
+        Me.lstIntervalSpan = New System.Windows.Forms.ListBox()
+        Me.dtmEndSpan = New System.Windows.Forms.DateTimePicker()
+        Me.dtmStartSpan = New System.Windows.Forms.DateTimePicker()
+        Me.lblElapsedLabel = New System.Windows.Forms.Label()
         Me.lblResultInterval = New System.Windows.Forms.Label()
         Me.lblEndTime = New System.Windows.Forms.Label()
         Me.lblStartTime = New System.Windows.Forms.Label()
-        Me.dtmStartSpan = New System.Windows.Forms.DateTimePicker()
-        Me.dtmEndSpan = New System.Windows.Forms.DateTimePicker()
-        Me.lstIntervalSpan = New System.Windows.Forms.ListBox()
-        Me.txtElapsedUnits = New System.Windows.Forms.Label()
-        Me.btnClearSpan = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
-        Me.btnUpdateSpan = New System.Windows.Forms.Button()
-        Me.btnCalculateSpan = New System.Windows.Forms.Button()
         Me.grpAddSubtract.SuspendLayout()
         CType(Me.errP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpSpan.SuspendLayout()
@@ -232,12 +232,12 @@ Partial Class frmMain
         '
         Me.grpSpan.Controls.Add(Me.btnClearSpan)
         Me.grpSpan.Controls.Add(Me.btnUpdateSpan)
-        Me.grpSpan.Controls.Add(Me.btnCalculateSpan)
-        Me.grpSpan.Controls.Add(Me.txtElapsedUnits)
+        Me.grpSpan.Controls.Add(Me.btnSpan)
+        Me.grpSpan.Controls.Add(Me.lblElapsedUnits)
         Me.grpSpan.Controls.Add(Me.lstIntervalSpan)
         Me.grpSpan.Controls.Add(Me.dtmEndSpan)
         Me.grpSpan.Controls.Add(Me.dtmStartSpan)
-        Me.grpSpan.Controls.Add(Me.lblElapsedUnits)
+        Me.grpSpan.Controls.Add(Me.lblElapsedLabel)
         Me.grpSpan.Controls.Add(Me.lblResultInterval)
         Me.grpSpan.Controls.Add(Me.lblEndTime)
         Me.grpSpan.Controls.Add(Me.lblStartTime)
@@ -248,14 +248,75 @@ Partial Class frmMain
         Me.grpSpan.TabStop = False
         Me.grpSpan.Text = "Determining the Interval"
         '
+        'btnClearSpan
+        '
+        Me.btnClearSpan.Location = New System.Drawing.Point(329, 308)
+        Me.btnClearSpan.Name = "btnClearSpan"
+        Me.btnClearSpan.Size = New System.Drawing.Size(125, 40)
+        Me.btnClearSpan.TabIndex = 17
+        Me.btnClearSpan.Text = "Clear"
+        Me.btnClearSpan.UseVisualStyleBackColor = True
+        '
+        'btnUpdateSpan
+        '
+        Me.btnUpdateSpan.Location = New System.Drawing.Point(175, 308)
+        Me.btnUpdateSpan.Name = "btnUpdateSpan"
+        Me.btnUpdateSpan.Size = New System.Drawing.Size(125, 40)
+        Me.btnUpdateSpan.TabIndex = 16
+        Me.btnUpdateSpan.Text = "Update Start From"
+        Me.btnUpdateSpan.UseVisualStyleBackColor = True
+        '
+        'btnSpan
+        '
+        Me.btnSpan.Location = New System.Drawing.Point(21, 308)
+        Me.btnSpan.Name = "btnSpan"
+        Me.btnSpan.Size = New System.Drawing.Size(125, 40)
+        Me.btnSpan.TabIndex = 15
+        Me.btnSpan.Text = "Calculate Span"
+        Me.btnSpan.UseVisualStyleBackColor = True
+        '
         'lblElapsedUnits
         '
-        Me.lblElapsedUnits.AutoSize = True
-        Me.lblElapsedUnits.Location = New System.Drawing.Point(20, 241)
+        Me.lblElapsedUnits.BackColor = System.Drawing.Color.White
+        Me.lblElapsedUnits.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblElapsedUnits.Location = New System.Drawing.Point(121, 240)
         Me.lblElapsedUnits.Name = "lblElapsedUnits"
-        Me.lblElapsedUnits.Size = New System.Drawing.Size(87, 17)
-        Me.lblElapsedUnits.TabIndex = 7
-        Me.lblElapsedUnits.Text = "Elapsed Units"
+        Me.lblElapsedUnits.Size = New System.Drawing.Size(155, 25)
+        Me.lblElapsedUnits.TabIndex = 14
+        '
+        'lstIntervalSpan
+        '
+        Me.lstIntervalSpan.FormattingEnabled = True
+        Me.lstIntervalSpan.ItemHeight = 17
+        Me.lstIntervalSpan.Location = New System.Drawing.Point(121, 151)
+        Me.lstIntervalSpan.Name = "lstIntervalSpan"
+        Me.lstIntervalSpan.Size = New System.Drawing.Size(155, 55)
+        Me.lstIntervalSpan.TabIndex = 10
+        '
+        'dtmEndSpan
+        '
+        Me.dtmEndSpan.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.dtmEndSpan.Location = New System.Drawing.Point(121, 92)
+        Me.dtmEndSpan.Name = "dtmEndSpan"
+        Me.dtmEndSpan.Size = New System.Drawing.Size(155, 25)
+        Me.dtmEndSpan.TabIndex = 9
+        '
+        'dtmStartSpan
+        '
+        Me.dtmStartSpan.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.dtmStartSpan.Location = New System.Drawing.Point(121, 33)
+        Me.dtmStartSpan.Name = "dtmStartSpan"
+        Me.dtmStartSpan.Size = New System.Drawing.Size(155, 25)
+        Me.dtmStartSpan.TabIndex = 8
+        '
+        'lblElapsedLabel
+        '
+        Me.lblElapsedLabel.AutoSize = True
+        Me.lblElapsedLabel.Location = New System.Drawing.Point(20, 241)
+        Me.lblElapsedLabel.Name = "lblElapsedLabel"
+        Me.lblElapsedLabel.Size = New System.Drawing.Size(87, 17)
+        Me.lblElapsedLabel.TabIndex = 7
+        Me.lblElapsedLabel.Text = "Elapsed Units"
         '
         'lblResultInterval
         '
@@ -284,49 +345,6 @@ Partial Class frmMain
         Me.lblStartTime.TabIndex = 4
         Me.lblStartTime.Text = "Start Time"
         '
-        'dtmStartSpan
-        '
-        Me.dtmStartSpan.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.dtmStartSpan.Location = New System.Drawing.Point(121, 33)
-        Me.dtmStartSpan.Name = "dtmStartSpan"
-        Me.dtmStartSpan.Size = New System.Drawing.Size(155, 25)
-        Me.dtmStartSpan.TabIndex = 8
-        '
-        'dtmEndSpan
-        '
-        Me.dtmEndSpan.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.dtmEndSpan.Location = New System.Drawing.Point(121, 92)
-        Me.dtmEndSpan.Name = "dtmEndSpan"
-        Me.dtmEndSpan.Size = New System.Drawing.Size(155, 25)
-        Me.dtmEndSpan.TabIndex = 9
-        '
-        'lstIntervalSpan
-        '
-        Me.lstIntervalSpan.FormattingEnabled = True
-        Me.lstIntervalSpan.ItemHeight = 17
-        Me.lstIntervalSpan.Location = New System.Drawing.Point(121, 151)
-        Me.lstIntervalSpan.Name = "lstIntervalSpan"
-        Me.lstIntervalSpan.Size = New System.Drawing.Size(155, 55)
-        Me.lstIntervalSpan.TabIndex = 10
-        '
-        'txtElapsedUnits
-        '
-        Me.txtElapsedUnits.BackColor = System.Drawing.Color.White
-        Me.txtElapsedUnits.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtElapsedUnits.Location = New System.Drawing.Point(121, 240)
-        Me.txtElapsedUnits.Name = "txtElapsedUnits"
-        Me.txtElapsedUnits.Size = New System.Drawing.Size(155, 25)
-        Me.txtElapsedUnits.TabIndex = 14
-        '
-        'btnClearSpan
-        '
-        Me.btnClearSpan.Location = New System.Drawing.Point(329, 308)
-        Me.btnClearSpan.Name = "btnClearSpan"
-        Me.btnClearSpan.Size = New System.Drawing.Size(125, 40)
-        Me.btnClearSpan.TabIndex = 17
-        Me.btnClearSpan.Text = "Clear"
-        Me.btnClearSpan.UseVisualStyleBackColor = True
-        '
         'btnExit
         '
         Me.btnExit.Location = New System.Drawing.Point(908, 436)
@@ -335,24 +353,6 @@ Partial Class frmMain
         Me.btnExit.TabIndex = 18
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
-        '
-        'btnUpdateSpan
-        '
-        Me.btnUpdateSpan.Location = New System.Drawing.Point(175, 308)
-        Me.btnUpdateSpan.Name = "btnUpdateSpan"
-        Me.btnUpdateSpan.Size = New System.Drawing.Size(125, 40)
-        Me.btnUpdateSpan.TabIndex = 16
-        Me.btnUpdateSpan.Text = "Update Start From"
-        Me.btnUpdateSpan.UseVisualStyleBackColor = True
-        '
-        'btnCalculateSpan
-        '
-        Me.btnCalculateSpan.Location = New System.Drawing.Point(21, 308)
-        Me.btnCalculateSpan.Name = "btnCalculateSpan"
-        Me.btnCalculateSpan.Size = New System.Drawing.Size(125, 40)
-        Me.btnCalculateSpan.TabIndex = 15
-        Me.btnCalculateSpan.Text = "Calculate Span"
-        Me.btnCalculateSpan.UseVisualStyleBackColor = True
         '
         'frmMain
         '
@@ -397,12 +397,12 @@ Partial Class frmMain
     Friend WithEvents grpSpan As GroupBox
     Friend WithEvents btnClearSpan As Button
     Friend WithEvents btnUpdateSpan As Button
-    Friend WithEvents btnCalculateSpan As Button
-    Friend WithEvents txtElapsedUnits As Label
+    Friend WithEvents btnSpan As Button
+    Friend WithEvents lblElapsedUnits As Label
     Friend WithEvents lstIntervalSpan As ListBox
     Friend WithEvents dtmEndSpan As DateTimePicker
     Friend WithEvents dtmStartSpan As DateTimePicker
-    Friend WithEvents lblElapsedUnits As Label
+    Friend WithEvents lblElapsedLabel As Label
     Friend WithEvents lblResultInterval As Label
     Friend WithEvents lblEndTime As Label
     Friend WithEvents lblStartTime As Label
