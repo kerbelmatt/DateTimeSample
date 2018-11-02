@@ -22,24 +22,27 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.grpAddSubtract = New System.Windows.Forms.GroupBox()
-        Me.lblStartDate = New System.Windows.Forms.Label()
-        Me.lblInterval = New System.Windows.Forms.Label()
-        Me.lblAddSubtract = New System.Windows.Forms.Label()
-        Me.lblHowMuch = New System.Windows.Forms.Label()
-        Me.lblAddSubResult = New System.Windows.Forms.Label()
-        Me.lblDTMResult = New System.Windows.Forms.Label()
-        Me.lblAltFormat = New System.Windows.Forms.Label()
-        Me.dtmStartAdd = New System.Windows.Forms.DateTimePicker()
-        Me.lstIntervalAdd = New System.Windows.Forms.ListBox()
-        Me.lstOp = New System.Windows.Forms.ListBox()
-        Me.txtQty = New System.Windows.Forms.TextBox()
-        Me.lblResult = New System.Windows.Forms.Label()
-        Me.dtmEndAdd = New System.Windows.Forms.DateTimePicker()
-        Me.lblAlt = New System.Windows.Forms.Label()
-        Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnClearAdd = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.lblAlt = New System.Windows.Forms.Label()
+        Me.dtmEndAdd = New System.Windows.Forms.DateTimePicker()
+        Me.lblResult = New System.Windows.Forms.Label()
+        Me.txtQty = New System.Windows.Forms.TextBox()
+        Me.lstOp = New System.Windows.Forms.ListBox()
+        Me.lstIntervalAdd = New System.Windows.Forms.ListBox()
+        Me.dtmStartAdd = New System.Windows.Forms.DateTimePicker()
+        Me.lblAltFormat = New System.Windows.Forms.Label()
+        Me.lblDTMResult = New System.Windows.Forms.Label()
+        Me.lblAddSubResult = New System.Windows.Forms.Label()
+        Me.lblHowMuch = New System.Windows.Forms.Label()
+        Me.lblAddSubtract = New System.Windows.Forms.Label()
+        Me.lblInterval = New System.Windows.Forms.Label()
+        Me.lblStartDate = New System.Windows.Forms.Label()
+        Me.errP = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.grpAddSubtract.SuspendLayout()
+        CType(Me.errP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'grpAddSubtract
@@ -67,127 +70,14 @@ Partial Class frmMain
         Me.grpAddSubtract.TabStop = False
         Me.grpAddSubtract.Text = "Adding and Subtracting Date"
         '
-        'lblStartDate
+        'btnClearAdd
         '
-        Me.lblStartDate.AutoSize = True
-        Me.lblStartDate.Location = New System.Drawing.Point(19, 39)
-        Me.lblStartDate.Name = "lblStartDate"
-        Me.lblStartDate.Size = New System.Drawing.Size(65, 17)
-        Me.lblStartDate.TabIndex = 0
-        Me.lblStartDate.Text = "Start date"
-        '
-        'lblInterval
-        '
-        Me.lblInterval.AutoSize = True
-        Me.lblInterval.Location = New System.Drawing.Point(19, 77)
-        Me.lblInterval.Name = "lblInterval"
-        Me.lblInterval.Size = New System.Drawing.Size(90, 17)
-        Me.lblInterval.TabIndex = 1
-        Me.lblInterval.Text = "What Interval?"
-        '
-        'lblAddSubtract
-        '
-        Me.lblAddSubtract.AutoSize = True
-        Me.lblAddSubtract.Location = New System.Drawing.Point(18, 153)
-        Me.lblAddSubtract.Name = "lblAddSubtract"
-        Me.lblAddSubtract.Size = New System.Drawing.Size(106, 17)
-        Me.lblAddSubtract.TabIndex = 2
-        Me.lblAddSubtract.Text = "Add or subtract?"
-        '
-        'lblHowMuch
-        '
-        Me.lblHowMuch.AutoSize = True
-        Me.lblHowMuch.Location = New System.Drawing.Point(18, 215)
-        Me.lblHowMuch.Name = "lblHowMuch"
-        Me.lblHowMuch.Size = New System.Drawing.Size(75, 17)
-        Me.lblHowMuch.TabIndex = 3
-        Me.lblHowMuch.Text = "How much?"
-        '
-        'lblAddSubResult
-        '
-        Me.lblAddSubResult.AutoSize = True
-        Me.lblAddSubResult.Location = New System.Drawing.Point(19, 259)
-        Me.lblAddSubResult.Name = "lblAddSubResult"
-        Me.lblAddSubResult.Size = New System.Drawing.Size(78, 17)
-        Me.lblAddSubResult.TabIndex = 4
-        Me.lblAddSubResult.Text = "String result"
-        '
-        'lblDTMResult
-        '
-        Me.lblDTMResult.AutoSize = True
-        Me.lblDTMResult.Location = New System.Drawing.Point(19, 310)
-        Me.lblDTMResult.Name = "lblDTMResult"
-        Me.lblDTMResult.Size = New System.Drawing.Size(71, 17)
-        Me.lblDTMResult.TabIndex = 5
-        Me.lblDTMResult.Text = "DTM result"
-        '
-        'lblAltFormat
-        '
-        Me.lblAltFormat.AutoSize = True
-        Me.lblAltFormat.Location = New System.Drawing.Point(18, 351)
-        Me.lblAltFormat.Name = "lblAltFormat"
-        Me.lblAltFormat.Size = New System.Drawing.Size(105, 17)
-        Me.lblAltFormat.TabIndex = 6
-        Me.lblAltFormat.Text = "Alternate Format"
-        '
-        'dtmStartAdd
-        '
-        Me.dtmStartAdd.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtmStartAdd.Location = New System.Drawing.Point(205, 31)
-        Me.dtmStartAdd.Name = "dtmStartAdd"
-        Me.dtmStartAdd.Size = New System.Drawing.Size(184, 25)
-        Me.dtmStartAdd.TabIndex = 7
-        '
-        'lstIntervalAdd
-        '
-        Me.lstIntervalAdd.FormattingEnabled = True
-        Me.lstIntervalAdd.ItemHeight = 17
-        Me.lstIntervalAdd.Location = New System.Drawing.Point(205, 77)
-        Me.lstIntervalAdd.Name = "lstIntervalAdd"
-        Me.lstIntervalAdd.Size = New System.Drawing.Size(184, 55)
-        Me.lstIntervalAdd.TabIndex = 8
-        '
-        'lstOp
-        '
-        Me.lstOp.FormattingEnabled = True
-        Me.lstOp.ItemHeight = 17
-        Me.lstOp.Location = New System.Drawing.Point(205, 153)
-        Me.lstOp.Name = "lstOp"
-        Me.lstOp.Size = New System.Drawing.Size(184, 38)
-        Me.lstOp.TabIndex = 9
-        '
-        'txtQty
-        '
-        Me.txtQty.Location = New System.Drawing.Point(205, 212)
-        Me.txtQty.Name = "txtQty"
-        Me.txtQty.Size = New System.Drawing.Size(184, 25)
-        Me.txtQty.TabIndex = 10
-        '
-        'lblResult
-        '
-        Me.lblResult.BackColor = System.Drawing.Color.White
-        Me.lblResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblResult.Location = New System.Drawing.Point(205, 258)
-        Me.lblResult.Name = "lblResult"
-        Me.lblResult.Size = New System.Drawing.Size(184, 25)
-        Me.lblResult.TabIndex = 11
-        '
-        'dtmEndAdd
-        '
-        Me.dtmEndAdd.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtmEndAdd.Location = New System.Drawing.Point(205, 304)
-        Me.dtmEndAdd.Name = "dtmEndAdd"
-        Me.dtmEndAdd.Size = New System.Drawing.Size(184, 25)
-        Me.dtmEndAdd.TabIndex = 12
-        '
-        'lblAlt
-        '
-        Me.lblAlt.BackColor = System.Drawing.Color.White
-        Me.lblAlt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblAlt.Location = New System.Drawing.Point(205, 350)
-        Me.lblAlt.Name = "lblAlt"
-        Me.lblAlt.Size = New System.Drawing.Size(184, 25)
-        Me.lblAlt.TabIndex = 13
+        Me.btnClearAdd.Location = New System.Drawing.Point(426, 350)
+        Me.btnClearAdd.Name = "btnClearAdd"
+        Me.btnClearAdd.Size = New System.Drawing.Size(126, 25)
+        Me.btnClearAdd.TabIndex = 15
+        Me.btnClearAdd.Text = "Clear"
+        Me.btnClearAdd.UseVisualStyleBackColor = True
         '
         'btnAdd
         '
@@ -198,14 +88,131 @@ Partial Class frmMain
         Me.btnAdd.Text = "Process"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
-        'btnClearAdd
+        'lblAlt
         '
-        Me.btnClearAdd.Location = New System.Drawing.Point(426, 350)
-        Me.btnClearAdd.Name = "btnClearAdd"
-        Me.btnClearAdd.Size = New System.Drawing.Size(126, 25)
-        Me.btnClearAdd.TabIndex = 15
-        Me.btnClearAdd.Text = "Clear"
-        Me.btnClearAdd.UseVisualStyleBackColor = True
+        Me.lblAlt.BackColor = System.Drawing.Color.White
+        Me.lblAlt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblAlt.Location = New System.Drawing.Point(205, 350)
+        Me.lblAlt.Name = "lblAlt"
+        Me.lblAlt.Size = New System.Drawing.Size(184, 25)
+        Me.lblAlt.TabIndex = 13
+        '
+        'dtmEndAdd
+        '
+        Me.dtmEndAdd.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtmEndAdd.Location = New System.Drawing.Point(205, 304)
+        Me.dtmEndAdd.Name = "dtmEndAdd"
+        Me.dtmEndAdd.Size = New System.Drawing.Size(184, 25)
+        Me.dtmEndAdd.TabIndex = 12
+        '
+        'lblResult
+        '
+        Me.lblResult.BackColor = System.Drawing.Color.White
+        Me.lblResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblResult.Location = New System.Drawing.Point(205, 258)
+        Me.lblResult.Name = "lblResult"
+        Me.lblResult.Size = New System.Drawing.Size(184, 25)
+        Me.lblResult.TabIndex = 11
+        '
+        'txtQty
+        '
+        Me.txtQty.Location = New System.Drawing.Point(205, 212)
+        Me.txtQty.Name = "txtQty"
+        Me.txtQty.Size = New System.Drawing.Size(184, 25)
+        Me.txtQty.TabIndex = 10
+        '
+        'lstOp
+        '
+        Me.lstOp.FormattingEnabled = True
+        Me.lstOp.ItemHeight = 17
+        Me.lstOp.Location = New System.Drawing.Point(205, 153)
+        Me.lstOp.Name = "lstOp"
+        Me.lstOp.Size = New System.Drawing.Size(184, 38)
+        Me.lstOp.TabIndex = 9
+        '
+        'lstIntervalAdd
+        '
+        Me.lstIntervalAdd.FormattingEnabled = True
+        Me.lstIntervalAdd.ItemHeight = 17
+        Me.lstIntervalAdd.Location = New System.Drawing.Point(205, 77)
+        Me.lstIntervalAdd.Name = "lstIntervalAdd"
+        Me.lstIntervalAdd.Size = New System.Drawing.Size(184, 55)
+        Me.lstIntervalAdd.TabIndex = 8
+        '
+        'dtmStartAdd
+        '
+        Me.dtmStartAdd.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtmStartAdd.Location = New System.Drawing.Point(205, 31)
+        Me.dtmStartAdd.Name = "dtmStartAdd"
+        Me.dtmStartAdd.Size = New System.Drawing.Size(184, 25)
+        Me.dtmStartAdd.TabIndex = 7
+        '
+        'lblAltFormat
+        '
+        Me.lblAltFormat.AutoSize = True
+        Me.lblAltFormat.Location = New System.Drawing.Point(18, 351)
+        Me.lblAltFormat.Name = "lblAltFormat"
+        Me.lblAltFormat.Size = New System.Drawing.Size(105, 17)
+        Me.lblAltFormat.TabIndex = 6
+        Me.lblAltFormat.Text = "Alternate Format"
+        '
+        'lblDTMResult
+        '
+        Me.lblDTMResult.AutoSize = True
+        Me.lblDTMResult.Location = New System.Drawing.Point(19, 310)
+        Me.lblDTMResult.Name = "lblDTMResult"
+        Me.lblDTMResult.Size = New System.Drawing.Size(71, 17)
+        Me.lblDTMResult.TabIndex = 5
+        Me.lblDTMResult.Text = "DTM result"
+        '
+        'lblAddSubResult
+        '
+        Me.lblAddSubResult.AutoSize = True
+        Me.lblAddSubResult.Location = New System.Drawing.Point(19, 259)
+        Me.lblAddSubResult.Name = "lblAddSubResult"
+        Me.lblAddSubResult.Size = New System.Drawing.Size(78, 17)
+        Me.lblAddSubResult.TabIndex = 4
+        Me.lblAddSubResult.Text = "String result"
+        '
+        'lblHowMuch
+        '
+        Me.lblHowMuch.AutoSize = True
+        Me.lblHowMuch.Location = New System.Drawing.Point(18, 215)
+        Me.lblHowMuch.Name = "lblHowMuch"
+        Me.lblHowMuch.Size = New System.Drawing.Size(75, 17)
+        Me.lblHowMuch.TabIndex = 3
+        Me.lblHowMuch.Text = "How much?"
+        '
+        'lblAddSubtract
+        '
+        Me.lblAddSubtract.AutoSize = True
+        Me.lblAddSubtract.Location = New System.Drawing.Point(18, 153)
+        Me.lblAddSubtract.Name = "lblAddSubtract"
+        Me.lblAddSubtract.Size = New System.Drawing.Size(106, 17)
+        Me.lblAddSubtract.TabIndex = 2
+        Me.lblAddSubtract.Text = "Add or subtract?"
+        '
+        'lblInterval
+        '
+        Me.lblInterval.AutoSize = True
+        Me.lblInterval.Location = New System.Drawing.Point(19, 77)
+        Me.lblInterval.Name = "lblInterval"
+        Me.lblInterval.Size = New System.Drawing.Size(90, 17)
+        Me.lblInterval.TabIndex = 1
+        Me.lblInterval.Text = "What Interval?"
+        '
+        'lblStartDate
+        '
+        Me.lblStartDate.AutoSize = True
+        Me.lblStartDate.Location = New System.Drawing.Point(19, 39)
+        Me.lblStartDate.Name = "lblStartDate"
+        Me.lblStartDate.Size = New System.Drawing.Size(65, 17)
+        Me.lblStartDate.TabIndex = 0
+        Me.lblStartDate.Text = "Start date"
+        '
+        'errP
+        '
+        Me.errP.ContainerControl = Me
         '
         'frmMain
         '
@@ -219,6 +226,7 @@ Partial Class frmMain
         Me.Text = "Date and Time Handling Samples"
         Me.grpAddSubtract.ResumeLayout(False)
         Me.grpAddSubtract.PerformLayout()
+        CType(Me.errP, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -240,4 +248,5 @@ Partial Class frmMain
     Friend WithEvents btnAdd As Button
     Friend WithEvents lblAlt As Label
     Friend WithEvents dtmEndAdd As DateTimePicker
+    Friend WithEvents errP As ErrorProvider
 End Class
