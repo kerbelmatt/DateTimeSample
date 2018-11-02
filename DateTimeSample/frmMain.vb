@@ -38,5 +38,8 @@
             Case Else
                 MessageBox.Show("Unexpected date interval in btnAdd_Click", "Program error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Select
+        dtmEndAdd.Value = DateAdd(dtiIntervalType, dblAmount, dtmStartAdd.Value)
+        lblResult.Text = CStr(dtmEndAdd.Value)
+        lblAlt.Text = Format(dtmEndAdd.Value, "MM-dd-yyyy")
     End Sub
 End Class
